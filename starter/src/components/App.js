@@ -14,6 +14,7 @@ function App() {
       <Route exact path="/search" element={
         <Search />
       } />
+       <Route path="*" element={<div><p>Page not found</p></div>}/>
 
     </Routes>
   )
