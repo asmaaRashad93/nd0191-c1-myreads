@@ -1,7 +1,9 @@
 import * as BooksAPI from '../BooksAPI';
- const defaultImg = "https://books.google.com/books/content?id=1&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+import PropTypes from 'prop-types';
 
 const BookCard = ({ book, onChangeBookShelf }) => {
+    const defaultImg = "https://books.google.com/books/content?id=1&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+
     const updateBookShelf = (book, newShelf) => {
         const update = async () => {
             await BooksAPI.update(book, newShelf);
@@ -54,4 +56,8 @@ const BookCard = ({ book, onChangeBookShelf }) => {
     )
 }
 
+BookCard.prototypes={
+    book:PropTypes.object.isRequired,
+    onChangeBookShelf:PropTypes.func.isRequired
+}
 export default BookCard;

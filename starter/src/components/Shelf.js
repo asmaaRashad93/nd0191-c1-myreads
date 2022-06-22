@@ -1,4 +1,5 @@
 import BookCard from "./BookCard";
+import PropTypes from 'prop-types';
 
 const Shelf = ({ title, books, onChangeBookShelf }) => {
     return (
@@ -16,5 +17,9 @@ const Shelf = ({ title, books, onChangeBookShelf }) => {
         </div>
     )
 }
-
+Shelf.prototypes={
+    title:PropTypes.string.isRequired,
+    books:PropTypes.array.isRequired,
+    onChangeBookShelf:PropTypes.func.isRequired
+}
 export default Shelf;
