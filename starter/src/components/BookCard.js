@@ -1,4 +1,5 @@
 import * as BooksAPI from '../BooksAPI';
+ const defaultImg = "https://books.google.com/books/content?id=1&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
 
 const BookCard = ({ book, onChangeBookShelf }) => {
     const updateBookShelf = (book, newShelf) => {
@@ -19,7 +20,7 @@ const BookCard = ({ book, onChangeBookShelf }) => {
                         style={{
                             width: 128,
                             height: 193,
-                            backgroundImage: `url(${book.imageLinks.smallThumbnail})`
+                            backgroundImage: `url(${book.imageLinks&&book.imageLinks.smallThumbnail ? book.imageLinks.smallThumbnail : defaultImg}})`
                             ,
                         }}
                     ></div>
