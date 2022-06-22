@@ -22,8 +22,13 @@ To get started developing right away:
 │   ├── favicon.ico # React Icon, You may change if you wish.
 │   └── index.html # DO NOT MODIFY
 └── src
+    ├── components # folder contains project components.
+    |    ├── App.js #This is the root of the app contains app routers.
+    |    ├── Home.js #This is the home component for displaying book shelfes.
+    |    ├── Search.js #This is the search component for displaying search in books page.
+    |    ├── Shelf.js #This is the shelf reusable component that disply the shelf by it;s title and containing books.
+    |    ├── BookCard.js #The Bookcard reusable component,responsible for displaying the book details and handle updating it's shelf.
     ├── App.css # Styles for your app. Feel free to customize this as you desire.
-    ├── App.js # This is the root of your app. Contains static HTML right now.
     ├── App.test.js # Used for testing. Provided with Create React App. Testing is encouraged, but not required.
     ├── BooksAPI.js # A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
     ├── icons # Helpful images for your app. Use at your discretion.
@@ -92,3 +97,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
 
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Authors
+[Udacity](https://github.com/udacity)
+[Asmaa Rashad](https://github.com/asmaaRashad93)
+
