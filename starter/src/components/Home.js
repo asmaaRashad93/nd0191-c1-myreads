@@ -1,22 +1,21 @@
 
 import Shelf from './Shelf';
 import { Link } from 'react-router-dom';
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import * as BooksAPI from '../BooksAPI';
 
 const Home = () => {
     const [books, setBooks] = useState([]);
 
-  useEffect(() => {
-      const getBooks = async () => {
-          const res = await BooksAPI.getAll();
-          setBooks(res);
-          console.log(res);
+    useEffect(() => {
+        const getBooks = async () => {
+            const res = await BooksAPI.getAll();
+            setBooks(res);
 
-      };
+        };
 
-      getBooks();
-  }, []);
+        getBooks();
+    }, []);
 
     const changeBookShelf = (book, newShelf) => {
         setBooks(books.map((b) => {
@@ -25,7 +24,7 @@ const Home = () => {
             }
             return b;
         }));
-  
+
     }
     return (
         <div className="list-books">
